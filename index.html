@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bin2Dec - Binary to Decimal Converter</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <header class="header">
+                <div class="badge">Tier 1: Beginner Challenge</div>
+                <h1>Bin2Dec Converter</h1>
+                <p class="subtitle">Convert binary numbers (base-2) to decimal (base-10) using positional notation
+                    mathematics.</p>
+            </header>
+
+            <div class="controls-row">
+                <label class="toggle-container"
+                    title="Toggle between standard 8-bit mode and bonus variable-length mode">
+                    <input type="checkbox" id="modeToggle">
+                    <span class="toggle-slider"></span>
+                    <span class="toggle-label" id="toggleLabel">Mode: <strong>8-bit limit</strong></span>
+                </label>
+                <button type="button" id="clearBtn" class="btn-secondary">Clear</button>
+            </div>
+
+            <div class="form-group">
+                <div class="label-row">
+                    <label for="binaryInput">Binary Input (Base 2):</label>
+                    <span class="counter" id="digitCounter">0 / 8 bits</span>
+                </div>
+                <div class="input-wrapper">
+                    <input type="text" id="binaryInput" placeholder="e.g. 10101100" autocomplete="off"
+                        spellcheck="false" maxlength="8" autofocus />
+                </div>
+                <div id="errorMessage" class="error-banner" role="alert" aria-live="polite">
+                    <span class="error-icon">⚠️</span>
+                    <span class="error-text">Invalid input: Only 0 and 1 are allowed in binary!</span>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="label-row">
+                    <label for="decimalOutput">Decimal Output (Base 10):</label>
+                </div>
+                <div class="input-wrapper">
+                    <input type="text" id="decimalOutput" placeholder="Result" readonly />
+                </div>
+            </div>
+
+            <div class="formula-group">
+                <label class="formula-label">Positional Notation Formula:</label>
+                <div id="formulaBox" class="formula-box">Enter binary digits to see the decimal value and calculation.
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
